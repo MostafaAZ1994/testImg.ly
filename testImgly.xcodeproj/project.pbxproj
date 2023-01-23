@@ -14,6 +14,8 @@
 		1CE044D42977E05000164458 /* testImglyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE044D32977E05000164458 /* testImglyTests.swift */; };
 		1CE044DE2977E05000164458 /* testImglyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE044DD2977E05000164458 /* testImglyUITests.swift */; };
 		1CE044E02977E05000164458 /* testImglyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE044DF2977E05000164458 /* testImglyUITestsLaunchTests.swift */; };
+		1CE044EE2977E17F00164458 /* VideoEditorSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 1CE044ED2977E17F00164458 /* VideoEditorSDK */; };
+		1CE044F02977E2E500164458 /* 30 Minute Timer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1CE044EF2977E2E500164458 /* 30 Minute Timer.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		1CE044D92977E05000164458 /* testImglyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testImglyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE044DD2977E05000164458 /* testImglyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testImglyUITests.swift; sourceTree = "<group>"; };
 		1CE044DF2977E05000164458 /* testImglyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testImglyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1CE044EF2977E2E500164458 /* 30 Minute Timer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "30 Minute Timer.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE044EE2977E17F00164458 /* VideoEditorSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,7 @@
 		1CE044B62977E04E00164458 = {
 			isa = PBXGroup;
 			children = (
+				1CE044EF2977E2E500164458 /* 30 Minute Timer.mp4 */,
 				1CE044C12977E04E00164458 /* testImgly */,
 				1CE044D22977E05000164458 /* testImglyTests */,
 				1CE044DC2977E05000164458 /* testImglyUITests */,
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = testImgly;
+			packageProductDependencies = (
+				1CE044ED2977E17F00164458 /* VideoEditorSDK */,
+			);
 			productName = testImgly;
 			productReference = 1CE044BF2977E04E00164458 /* testImgly.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 1CE044B62977E04E00164458;
+			packageReferences = (
+				1CE044EC2977E17F00164458 /* XCRemoteSwiftPackageReference "vesdk-ios-build" */,
+			);
 			productRefGroup = 1CE044C02977E04E00164458 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +244,7 @@
 			files = (
 				1CE044CA2977E05000164458 /* Preview Assets.xcassets in Resources */,
 				1CE044C72977E05000164458 /* Assets.xcassets in Resources */,
+				1CE044F02977E2E500164458 /* 30 Minute Timer.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CE044EC2977E17F00164458 /* XCRemoteSwiftPackageReference "vesdk-ios-build" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/imgly/vesdk-ios-build";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CE044ED2977E17F00164458 /* VideoEditorSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CE044EC2977E17F00164458 /* XCRemoteSwiftPackageReference "vesdk-ios-build" */;
+			productName = VideoEditorSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CE044B72977E04E00164458 /* Project object */;
 }
